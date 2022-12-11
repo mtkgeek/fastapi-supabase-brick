@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    {% block head %}
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    {% endblock %}
+    <title>{% block title %}{% endblock %} - VasilJobs</title>
+   
+</head>
+<body>
+    <div id="header">
+        {% block header %}
+        {% include 'navbar.html' %}
+        
+        {% endblock %}
+      
+      </div>
+
+
+    <div id="content">{% block content %}{% endblock %}</div>
+    <div id="footer">
+
+      
+        {% block footer %}
+        <p class="font-bold">{{ DEBUG }}</p>
+        &copy; Copyright 2008 by <a href="http://domain.invalid/">you</a>.
+        {% endblock %}
+    </div>
+
+    <!-- Include CDN JavaScript -->
+   <script src="https://unpkg.com/tailwindcss-jit-cdn"></script>
+  <script src="{{ url_for('static', path='js/index.js') }}"></script>
+  <!-- Hot reload script -->
+  {% if DEBUG %} 
+  {{ hot_reload.script(url_for('hot-reload')) | safe }} 
+  {% endif %}
+
+
+    {% block javascript %}
+    {% endblock %}
+</body>
+</html>

@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% block title %}{{ data.title }}{% endblock %}
+{% block head %}
+  
+{% endblock %}
+{% block content %}
+<div
+class="w-[608px] h-[551px] relative overflow-hidden rounded-lg bg-white border border-[#c9c9c9]"
+>
+<div class="flex flex-col justify-start items-start absolute left-8 top-8 gap-2">
+  <p class="flex-grow-0 flex-shrink-0 text-[40px] font-medium text-left text-[#3700ad]">
+    Welcome back!
+  </p>
+  <p class="flex-grow-0 flex-shrink-0 text-sm font-bold text-left">
+    <span class="flex-grow-0 flex-shrink-0 text-sm font-bold text-left text-black"
+      >Don’t have an account? </span
+    ><span class="flex-grow-0 flex-shrink-0 text-sm font-bold text-left text-[#3700ad]"
+      >Sign up</span
+    >
+  </p>
+</div>
+<div class="flex flex-col justify-start items-start absolute left-8 top-[174px] gap-6">
+  <div class="flex flex-col justify-start items-start flex-grow-0 flex-shrink-0 relative gap-1">
+    <p class="flex-grow-0 flex-shrink-0 text-sm font-medium text-left text-[#4a484e]">Email</p>
+    <div
+      class="flex-grow-0 flex-shrink-0 w-[544px] h-[51px] relative overflow-hidden rounded-lg border border-[#4a484e]"
+    >
+      <p class="absolute left-[15px] top-[15px] text-base text-left text-[#4a484e]">
+        Enter Email
+      </p>
+    </div>
+  </div>
+  <div class="flex flex-col justify-start items-start flex-grow-0 flex-shrink-0 relative gap-1">
+    <p class="flex-grow-0 flex-shrink-0 text-sm font-medium text-left text-[#4a484e]">Password</p>
+    <div
+      class="flex-grow-0 flex-shrink-0 w-[544px] h-[51px] relative overflow-hidden rounded-lg border border-[#4a484e]"
+    >
+      <p class="absolute left-[15px] top-[15px] text-base text-left text-[#4a484e]">
+        Enter Password
+      </p>
+    </div>
+  </div>
+</div>
+<div
+  class="flex flex-col justify-start items-center absolute left-[164px] top-[398px] gap-[15px]"
+>
+  <div
+    class="flex justify-center items-center flex-grow-0 flex-shrink-0 relative px-8 py-4 rounded-lg bg-[#3700ad]"
+  >
+    <p class="flex-grow-0 flex-shrink-0 text-base font-bold text-left text-white">Sign In</p>
+  </div>
+  <div
+    class="flex justify-center items-center flex-grow-0 flex-shrink-0 w-[280px] relative gap-4 px-8 py-4 rounded-lg bg-white border border-[#4a484e]"
+  >
+    <img src="google---png-0.png" class="flex-grow-0 flex-shrink-0 w-5 h-5 object-cover" />
+    <p class="flex-grow-0 flex-shrink-0 text-base font-bold text-center text-[#4a484e]">
+      Sign in with Google
+    </p>
+  </div>
+</div>
+</div>
+{% endblock %}
